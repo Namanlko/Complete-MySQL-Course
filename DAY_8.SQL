@@ -69,7 +69,10 @@ select first_name AS WORKER_NAME from worker;
 select UPPER(first_name) from worker;
 
 -- Q-3. Write an SQL query to fetch unique values of DEPARTMENT from Worker table.
-SELECT distinct department from worker;
+-- OLD CODE (SELECT distinct department from worker;)
+
+-- NEW CODE (Optimized Query for SQL) Changes Done by Naman Pandey
+select department from worker group by department;
 
 -- Q-4. Write an SQL query to print the first three characters of  FIRST_NAME from Worker table.
 select substring(first_name, 1, 3) from worker;
